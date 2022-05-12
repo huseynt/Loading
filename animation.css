@@ -1,0 +1,69 @@
+* {
+    background: rgb(38, 30, 85);
+}
+body {
+    background: none;
+}
+
+.loader {
+    width: 135px;
+    height: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 25% 0 0 47%;
+}
+.loader span {
+    font-size: 22px;
+    margin: auto;
+}
+.ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #00c3ff;
+    animation: bounce .5s alternate infinite; 
+}
+.ball:nth-child(2) {
+    animation-delay: .16s;
+}
+.ball:nth-child(3) {
+    animation-delay: .32s;
+}
+
+@keyframes bounce {
+    from {
+        transform: scale(1.25);
+    }
+    to {
+        transform: translateY(-50px) scaleX(1);
+    }
+}
+
+.button {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px 50px;
+    border: 3px solid #3c67e3;
+    border-radius: 10px; 
+    margin-left: 46%;
+    margin-top: 10%;
+}
+
+.button:hover{
+    animation: pulsate ease-in-out 1.2s;
+}
+
+@keyframes pulsate {
+    from {
+        box-shadow: 0 0 35px #4e00c2;
+    }
+    to {
+        box-shadow: 0 0 35px #3babca;
+    }
+    to {
+        box-shadow: 0 0 0 #3c67e3;
+    }
+}
